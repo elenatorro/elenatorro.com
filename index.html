@@ -1,20 +1,87 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-<div class="home">
+    <title>Elena Torro</title>
 
-  <h1>Posts</h1>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-</div>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Elena Torro</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="blog.html">Twitter</a></li>
+            <li><a href="blog.html">GitHub</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- +++++ Welcome Section +++++ -->
+	<div id="ww">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 centered info">
+					<img src="assets/img/profile.png" alt="ElenaTorro" class="profile">
+					<h1>Nice to meet you</h1>
+					<h4>I'm very glad you're here. Let me introduce myself.</h4>
+					<h4>My name is Elena Torró. I am a spanish girl currently living in Alicante, where I'm finishing my bachelor in <a href="http://cvnet.cpd.ua.es/webcvnet/planestudio/planestudiond.aspx?plan=C205">Multimedia Development</a>.
+					Yes, it means I'm quite nerd and that I love geek stuff. I love the Internet, the new technologies and all the magic I can do with it.
+					</h4>
+					<h4>This summer, I am studying in <a href="http://ironhack.com/en/">Ironhack</a> in the beautiful city of Barcelona. It is a very intensive bootcamp where I'm learning awesome things as Ruby, Ruby on Rails, Agile methodologies and also improving my skills in Javascript, HTML and CSS. As you can see, I focus my future in Web Development.</h4>
+					<h4>I am very interested in E-Learning and also UX design. I am doing some online courses by <a href="https://mejorando.la/">Mejorando.la</a>, you can see my <a href="https://cursos.mejorando.la/usuarios/Elenarcolepsia/">progress</a>.</h4>
+				
+					<h4>I enjoy learning languages and meeting new people, that's why I spend one semester in Salzburg, at the <a href="http://www.fh-salzburg.ac.at/">FHS</a>, studying some subjects of MultiMedia Technology and MultiMedia Arts bachelors. I had the oportunity to assist to Codefront.io in Linz. Thanks I went to Salzburg, I met very good people, and also very cool designers and developers I learned a lot from.</h4>
+
+					<h4>You can stalk my <a href="https://github.com/elenatorro">GitHub</a> account and see what I do and what I code, and also some live projects as <a href="http://elenatorro.github.io/dommytree/">DommyTree</a> or basic stupid games as <a href="http://elenatorro.github.io/HalloweenColors/">Halloween Colors</a>. I try to improve and challenge myself everyday.</h4>
+
+					<h4>I love designing, learning and creating things. And of course, spending time with my family and with my friends, that's what make me feel alive every single day.</h4>
+				</div><!-- /col-lg-8 -->
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /ww -->
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
