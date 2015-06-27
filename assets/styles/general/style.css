@@ -2969,9 +2969,8 @@ nav.horizontal-nav > ul > li {
   font-family: "Helvetica"; }
 
 header.main-header nav {
-  background-color: #8A7E66;
+  background-color: #248F8D;
   display: table;
-  height: 10px;
   margin-bottom: 100px;
   opacity: 0.9;
   position: fixed;
@@ -2983,31 +2982,31 @@ header.main-header nav > a {
   color: white;
   display: inline-block;
   margin: 0px;
-  padding: 15px; }
+  padding: 15px;
+  background-color: #248F8D; }
 
 header.main-header nav > a:hover {
-  background-color: #A79B83;
+  background-color: #79B5AC;
   color: white; }
 
 #main-link {
   float: left; }
 
 @media screen and (max-width: 600px) {
+  .page-title {
+    font-size: 2.5em; }
+  .page-text-title {
+    font-size: 2em; }
   header.main-header nav {
     display: block;
-    height: 156px;
     position: relative;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 0px; }
   header.main-header nav > a {
     display: inline-block;
     padding: 10px 0;
     width: 100%; } }
-
-@media screen and (max-width: 600px) {
-  header.main-header nav {
-    height: 168px;
-    margin-bottom: 0px; } }
 
 article.main-content {
   background-color: transparent;
@@ -3016,7 +3015,7 @@ article.main-content {
   width: 100%; }
 
 .main-container {
-  background-color: rgba(167, 155, 131, 0.7);
+  background-color: rgba(121, 181, 172, 0.7);
   text-align: center;
   color: white;
   height: 100%; }
@@ -3129,7 +3128,7 @@ section.resources > header {
   top: 0;
   width: 100%;
   text-align: center;
-  background-color: #8A7E66;
+  background-color: #248F8D;
   margin: 0 auto;
   padding: 5px;
   color: white; }
@@ -3154,7 +3153,7 @@ section.resources {
   vertical-align: top;
   border-radius: 0px;
   margin-bottom: 10px;
-  background-color: #A79B83;
+  background-color: #79B5AC;
   -webkit-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
