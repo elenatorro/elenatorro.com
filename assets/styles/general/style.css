@@ -1,8 +1,6 @@
-.cover-background {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+html {
+  height: 100%;
+}
 
 .cover-avatar {
   background-image: url('../../images/elenatorro.png');
@@ -21,7 +19,8 @@
 }
 
 .cover-background-right {
-  background-attachment: fixed;
+  position: static;
+  background-attachment: absolute;
   background-position: right;
   background-repeat: no-repeat;
   background-size: 40%; }
@@ -122,16 +121,10 @@ header.main-header nav > a:hover {
     display: inline-block;
     padding: 10px 0;
     width: 100%; } 
-
-  .cover-background-right {
-    background-size: 100%; 
-    background-position: left;
-  }
-
   .blue7 {
     background-color: rgba(46, 184, 230, 0.80)
   }
-  }
+}
 
 article.main-content {
   background-color: transparent;
@@ -140,17 +133,13 @@ article.main-content {
   width: 100%; }
 
 .main-container {
-  background-color: rgba(121, 181, 172, 0.7);
+  background-color: transparent;
   text-align: center;
   color: white;
-  min-height: 100%; }
+  min-height: 100%; 
+}
   .main-container > .grid.group > .col {
-    margin-top: 15%; }
-
-
-article.main-title {
-  display: block;
-  text-align: center; }
+    margin-top: 10%; }
 
 .portfolio-list {
   font-size: 24px;
