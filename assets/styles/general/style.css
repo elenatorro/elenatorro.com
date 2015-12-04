@@ -124,7 +124,8 @@ header.main-header nav > a:hover {
     width: 100%; } 
 
   .cover-background-right {
-    background-size: 80%; 
+    background-size: 100%; 
+    background-position: center;
   }
 
   .blue7 {
