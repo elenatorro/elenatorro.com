@@ -123,10 +123,10 @@ header.main-header nav > a:hover {
     padding: 10px 0;
     width: 100%; } 
 
-/*  .cover-background-right {
+  .cover-background-right {
     background-size: 100%; 
-    background-position: center;
-  }*/
+    background-position: left;
+  }
 
   .blue7 {
     background-color: rgba(46, 184, 230, 0.80)
