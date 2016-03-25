@@ -1,199 +1,183 @@
-<!DOCTYPE html5>
-<html5>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Elena Torró</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="bower_components/phoenixframework/dist/src/phoenixfw.css">
-  <link rel="stylesheet" href="assets/styles/general/style.css">
-  <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css">
+  <meta charset="utf-8" />
+  <title>Responsive Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Custom fonts. To improve load times, remove this and update the h1 styling in style.css--> 
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <!-- favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  
+  <!-- just in case viewer is using Internet Explorer -->
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 </head>
-<body id="page-body">
-  <header class="main-header cover-background">
-    <article class="main-title">
-      <header class="main-title">
-        <nav id="top-bar" class="nav bg-blue9">
-          <a href="#main" id="main-link" class="nav-link bg-blue9 bg-hover-blue6">Main</a>
-          <a href="#about" class="nav-link bg-blue9 bg-hover-purple7">About</a>
-          <a href="#projects" class="nav-link bg-blue9 bg-hover-orange6">Projects</a>
-          <a href="#talks" class="nav-link bg-blue9 bg-hover-lime7">Talks</a>
-          <a href="#contact" class="nav-link bg-blue9 bg-hover-blue6">Contact</a>
-          <a href="http://bordertopstyle.com" target="_blank" class="nav-link bg-blue9 bg-hover-blue6">Blog</a>
-        </nav>
-      </header>
-    </article>
-  </header>
-  <div class="main-container bg-blue7 cover-background-right cover-avatar" id="main">
-      <section class="grid group">
-        <div class="col six blue7">
-          <h1>Elena Torró</h1>
-          <h2 id="text-title">Developer</h2>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/ElenaTorro" class="font-blue10 font-hover-blue3" target="_blank"><span class="flaticon-facebook2"></span></a>
-            <a href="https://twitter.com/@elenarcolepsia" target="_blank" class="font-blue10 font-hover-blue3"><span class="flaticon-twitter"></span></a>
-            <a href="https://github.com/elenatorro" target="_blank" class="font-blue10 font-hover-blue3"><span class="flaticon-github10"></span></a>
-            <a href="https://es.linkedin.com/in/elenatorro" target="_blank" class="font-blue10 font-hover-blue3"><span class="flaticon-linkedin"></span></a>
-          </div>
-        </div>
-      </section>
-  </div>
-  <div class="main-container bg-purple7 cover-background-right cover-about" id="about">
-      <section class="grid group">
-        <div class="col six">
-          <h1>About me</h1>
-          <section class="grid group padding">
-            <div class="col three text-right purple7">
-              <h3>I am a developer and designer currently based in Alicante, Spain. I have a bachelor degree in Multimedia Development, and I am working as a fronted developer. Frameworks? Whatever. A framework is just a different way to write the same things. To find out more about me, take a look to my CV</h3>
-            <a href="assets/pdf/Resume_ElenaTorro.pdf" class="s-medium filled b-bottom bg-purple9 border-purple12" target="_blank">CV</a>
-            </div>
-          </section>
-        </div>
-      </section>
-  </div>
-  <div class="main-container bg-orange7 cover-background-right cover-portfolio" id="projects">
-      <section class="grid group">
-        <div class="col six">
-          <h1>Projects</h1>
-          <h2 id="text-title">This is what I do</h2>
-        </div>
-        <section class="grid group">
-          <div class="col three text-right">
-          <ul class="portfolio-list orange6">
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://playlingua.herokuapp.com/" target="_blank">Playlingua </a>
-              <span class="tags bg-blue6">CSS</span>
-              <span class="tags bg-yellow7">JS</span>
-              <span class="tags bg-red8">AngularJS</span>
-              <span class="tags bg-green9">NodeJS</span>
-              <span class="tags bg-purple9">Bootstrap</span>
-              <p>Final bachelor project. Learn advanced Spanish using Gamification and Natural Language Processing tools</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://elenatorro.github.io/MappeJS" target="_blank">MappeJS</a>
-              <span class="tags bg-yellow7">JS</span>
-              <span class="tags bg-red10">npm</span>
-              <p>CLI tool to manage your project files automatically while you're working.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://uxsuite.herokuapp.com/" target="_blank">UX Suite</a>          
-              <span class="tags bg-pink9">UX</span>
-              <span class="tags bg-green9">NodeJS</span>
-              <p>Find UX resources.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="http://elenatorro.github.io/Phoenix-Framework" target="_blank">Phoenix Framework</a>            
-              <span class="tags bg-blue6">CSS</span>
-              <span class="tags bg-pink5">SASS</span>
-              <p>Tiny CSS framework to build simple websites. This site uses it!</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://elenatorro.github.io/LookJS" target="_blank">LookJS</a>
-              <span class="tags bg-yellow7">JS</span>
-              <p>Personal JavaScript library to manage simply DOM, localization and styles.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://domofera.herokuapp.com/" target="_blank">Domofera</a>
-              <span class="tags bg-pink5">SASS</span>
-              <span class="tags bg-purple9">Bootstrap</span>
-              <span class="tags bg-red7">Ruby</span>
-              <span class="tags bg-red7">Rails</span>
-              <span class="tags bg-green8">Arduino</span>
-              <p>University project to help urban agriculture.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://elenatorro.github.io/HalloweenColors" target="_blank">Halloween Colors</a>
-              <span class="tags bg-yellow7">JS</span>
-              <span class="tags bg-purple9">Bootstrap</span>
-              <p>Funny simple web game.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="http://elenatorro.github.io/dommytree" target="_blank">Dommy Tree</a>
-              <span class="tags bg-yellow7">JS</span>
-              <span class="tags bg-blue6">CSS</span>
-              <p>See the tree schema of your HTML.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://toyu.herokuapp.com/" target="_blank">TOYU</a>
-              <span class="tags bg-pink5">SASS</span>
-              <span class="tags bg-purple9">Bootstrap</span>
-              <span class="tags bg-pink9">UX</span>
-              <span class="tags bg-red7">Ruby</span>
-              <span class="tags bg-red7">Rails</span>
-              <p>Two-weeks project. Test your website content.</p>
-            </li>
-            <li>
-              <a class="font-orange10 font-hover-orange12" href="https://github.com/elenatorro/designs" target="_blank">Designs</a>
-              <span class="tags bg-blue6">SVG</span>
-              <span class="tags bg-blue6">Inkscape</span>
-              <span class="tags bg-blue6">Photoshop</span>
-              <span class="tags bg-blue6">Gimp</span>
-              <span class="tags bg-blue6">Sketch</span>
-              <span class="tags bg-blue6">Drawing</span>
-              <p>Not just a coder ;)</p>
-            </li>
-          </ul>
-          </div>
-        </section>
-      </section>
-    </div>
-    <div class="main-container bg-lime7 cover-background-right cover-talks" id="talks">
-      <section class="grid group">
-        <div class="col six">
-          <h1>Talks</h1>
-          <h2 id="text-title">I have a 'speaker side'</h2>
-        </div>
-        <section class="grid group">
-          <div class="col three text-right">
-          <ul class="portfolio-list lime7">
-            <li>
-              <a class="font-lime10 font-hover-lime12" href="http://www.slideshare.net/ElenaTorro/an-introduction-to-user-experience" target="_blank">User Experience</a>
-              <p>Short introduction about UX</p>
-            </li>
-            <li>
-              <a class="font-lime10 font-hover-lime12" href="http://www.slideshare.net/ElenaTorro/angularjs-meets-rails" target="_blank">AngularJS meets Rails</a>
-              <p>A brief explanation of how to build a simple application using Ruby on Rails and AngularJS, complemented with an app sample open source.</p>
-            </li>
-            <li>
-              <a class="font-lime10 font-hover-lime12" href="http://www.slideshare.net/ElenaTorro/agile-and-ux" target="_blank">Agile and UX</a>
-              <p>How can we combine both Agile and UX methodologies?</p>
-            </li>
-            <li>
-              <a class="font-lime10 font-hover-lime12" href="http://elenatorro.github.io/InterfaceSlides" target="_blank">User Interface Design through the ages</a>
-              <p>Basic UI knowledge for building useful user interfaces</p>
-            </li>
-          </ul>
-          </div>
-        </section>
-      </section>
-    </div>
-    <div class="main-container bg-blue7 cover-background-right cover-avatar" id="contact">
-      <section class="grid group">
-        <div class="col six blue7">
-          <h1>Contact</h1>
-          <h2 id="text-title">elenatorro [at] gmail [dot] com</h2>
-          <h2 id="text-title">@elenarcolepsia</h2>
-        </div>
-      </section>
-  </div>
 
-  <footer class="bg-gray5">
-    <section class="grid group">
-      <div class="col six">
-        <a href="https://elenatorro.com">2015 Elena Torr&oacute;</a>
+<body>
+  
+  <!-- Header-->
+  <header>
+    <span id="header-over-color">
+      <h1>Elena Torró</h1>
+      <p>Software Developer</p>
+      <div class="social">
+        <a href="https://www.facebook.com/ElenaTorro"><i class="flaticon-social"></i></a>
+        <a href="https://twitter.com/Elenarcolepsia"><i class="flaticon-social-media"></i></a>
+        <a href="https://www.instagram.com/elenascript/"><i class="flaticon-social-media-1"></i></a>
+        <a href="https://es.linkedin.com/in/elenatorro
+"><i class="flaticon-social-media-3"></i></a>
+        <a href="https://github.com/elenatorro"><i class="flaticon-circle-1"></i></a>
       </div>
+    </span>
+  </header>
+  
+  <div class="container">
+    
+    <!-- Introduction-->
+    <section class="center">
+      <h1>Hello, world!</h1>
+      <p>
+        I'm Elena Torró, a Spanish software developer felt in love with web development and design. I code, design, read & travel as much as possible.
+      </p>
     </section>
-  </footer>
-  <script type="text/javascript" src="bower_components/LookJS/lib/Look.js"></script>
-  <script type="text/javascript" src="assets/scripts/components/index.js"></script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    <!-- Testimonials-->  
+    <section class="testimonial">
+      <div class="row center">
+        <div class="grid-2">
+          <img src="img/work/playlingua.png">
+          <h2>Playlingua</h2>
+          <p>Final bachelor project. Learn advanced Spanish using Gamification and Natural Language Processing tools.</p>
+        </div>
+        
+        <div class="grid-2">
+          <img src="img/work/phoenixframework.png">
+          <h2>Phoenix Framework</h2>
+          <p>Tiny CSS framework to build simple websites.</p>
+        </div>
+    
+        <div class="grid-2">
+          <img src="img/work/lookjs.gif">
+          <h2>LookJS</h2>
+          <p>Personal JavaScript library to manage simply DOM, localization and styles</p>
+        </div>
+      </div>
+      <section class="row">
+            <ul class="portfolio-list orange6">
+              <li>
+                <a class="text-link" href="https://playlingua.herokuapp.com/" target="_blank">Playlingua</a>
+                <span class="tags bg-blue6">CSS</span>
+                <span class="tags bg-yellow7">JS</span>
+                <span class="tags bg-red8">AngularJS</span>
+                <span class="tags bg-green9">NodeJS</span>
+                <span class="tags bg-purple9">Bootstrap</span>
+                <p>Final bachelor project. Learn advanced Spanish using Gamification and Natural Language Processing tools</p>
+              </li>
+              <li>
+                <a class="text-link" href="https://elenatorro.github.io/MappeJS" target="_blank">MappeJS</a>
+                <span class="tags bg-yellow7">JS</span>
+                <span class="tags bg-red10">npm</span>
+                <p>CLI tool to manage your project files automatically while you're working.</p>
+              </li>
+              <li>
+                <a class="text-link" href="https://uxsuite.herokuapp.com/" target="_blank">UX Suite</a>          
+                <span class="tags bg-pink9">UX</span>
+                <span class="tags bg-green9">NodeJS</span>
+                <p>Find UX resources.</p>
+              </li>
+              <li>
+                <a class="text-link" href="http://elenatorro.github.io/Phoenix-Framework" target="_blank">Phoenix Framework</a>            
+                <span class="tags bg-blue6">CSS</span>
+                <span class="tags bg-pink5">SASS</span>
+                <p>Tiny CSS framework to build simple websites.</p>
+              </li>
+              <li>
+                <a class="text-link" href="https://elenatorro.github.io/LookJS" target="_blank">LookJS</a>
+                <span class="tags bg-yellow7">JS</span>
+                <p>Personal JavaScript library to manage simply DOM, localization and styles.</p>
+              </li>
+              <li>
+                <a class="text-link"  href="https://domofera.herokuapp.com/" target="_blank">Domofera</a>
+                <span class="tags bg-pink5">SASS</span>
+                <span class="tags bg-purple9">Bootstrap</span>
+                <span class="tags bg-red7">Ruby</span>
+                <span class="tags bg-red7">Rails</span>
+                <span class="tags bg-green8">Arduino</span>
+                <p>University project to help urban agriculture.</p>
+              </li>
+              <li>
+                <a class="text-link" href="https://elenatorro.github.io/HalloweenColors" target="_blank">Halloween Colors</a>
+                <span class="tags bg-yellow7">JS</span>
+                <span class="tags bg-purple9">Bootstrap</span>
+                <p>Funny simple web game.</p>
+              </li>
+              <li>
+                <a class="text-link" href="http://elenatorro.github.io/dommytree" target="_blank">Dommy Tree</a>
+                <span class="tags bg-yellow7">JS</span>
+                <span class="tags bg-blue6">CSS</span>
+                <p>See the tree schema of your HTML.</p>
+              </li>
+              <li>
+                <a class="text-link" href="https://toyu.herokuapp.com/" target="_blank">TOYU</a>
+                <span class="tags bg-pink5">SASS</span>
+                <span class="tags bg-purple9">Bootstrap</span>
+                <span class="tags bg-pink9">UX</span>
+                <span class="tags bg-red7">Ruby</span>
+                <span class="tags bg-red7">Rails</span>
+                <p>Two-weeks project. Test your website content.</p>
+              </li>
+              <li>
+                <a class="text-link" href="https://github.com/elenatorro/designs" target="_blank">Designs</a>
+                <span class="tags bg-blue6">SVG</span>
+                <span class="tags bg-blue6">Inkscape</span>
+                <span class="tags bg-blue6">Photoshop</span>
+                <span class="tags bg-blue6">Gimp</span>
+                <span class="tags bg-blue6">Sketch</span>
+                <span class="tags bg-blue6">Drawing</span>
+                <p>Not just a coder ;)</p>
+              </li>
+            </ul>
+          </section>
 
-  ga('create', 'UA-35135270-1', 'auto');
-  ga('send', 'pageview');
+    <h2 class="center">My work is available in my <a class="text-link" href="https://github.com/elenatorro">GitHub</a> account</h2>
+    </section>
 
-</script>
+    <hr>
+
+  <!-- Gallery Block-->
+    <section class="gallery">
+      <h1 class="center">Designs</h1>
+      <div class="row">
+        <img src="img/designs/design4.png" class="grid-2">
+        <img src="img/designs/design5.png" class="grid-2">
+        <img src="img/designs/design6.png" class="grid-2">
+        <img src="img/designs/design1.png" class="grid-2">
+        <img src="img/designs/design2.png" class="grid-2">
+        <img src="img/designs/design3.png" class="grid-2">
+      </div>
+      <h2 class="center">More in the <a class="text-link" href="http://skribado23.com">design blog</a> where I'm participating</h2>
+    </section>
+
+  </div> <!-- End container-->
+  
+        <!-- Spotlight -->
+  <section class="spotlight">
+    <div class="container">
+      <div class="row">
+        <div class="grid-3">
+          <img class="img-circle" src="img/profile_square.png">
+        </div>
+        <div class="grid-3">
+          <h1>Resume</h1>
+          <p>To find out more about me, take a look to my CV</p>
+          <a href="assets/pdf/Resume_ElenaTorro.pdf">View CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
-</html5>
+</html>
