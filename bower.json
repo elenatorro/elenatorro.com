@@ -1,0 +1,27 @@
+{
+  "name": "elena_torro_personal_website",
+  "version": "0.1.0",
+  "description": "Elena Torro - Personal Webiste",
+  "authors": [
+    "Elena Torro <elenatorro@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "allineed": "^0.2.1",
+    "allineed-panel-info": "^0.1.0",
+    "prism": "prismjs#^1.5.1"
+  }
+}
