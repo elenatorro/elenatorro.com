@@ -14,6 +14,26 @@ h1 {
   font-size: 8em;
 }
 
+h2 {
+  font-size: 3em;
+}
+
+.ain-navbar-list {
+  > li {
+    display: inline-block;
+  }
+}
+
 .ain-panel-info-header {
   height: 500px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
 }
