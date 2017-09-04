@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url("../../assets/styles/fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype"); }
+
+.et-header h1 {
+  font-size: 6em;
+  line-height: 1.5; }
+
+.et-img-portfolio {
+  width: 100%; }
+
+.et-title {
+  font-family: 'Open Sans Bold'; }
+
+.et-text {
+  font-size: 1.8em; }
+
+.et-buttons {
+  justify-content: center; }
+
+@media all and (max-width: 993px) {
+  .et-text {
+    font-size: 1em; }
+  .et-header h1 {
+    font-size: 2em; } }
