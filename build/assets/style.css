@@ -2,18 +2,28 @@
   font-family: 'Open Sans Bold';
   src: url("../../assets/styles/fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype"); }
 
-.et-header h1 {
-  font-size: 6em;
-  line-height: 1.5; }
-
 .et-img-portfolio {
   width: 100%; }
 
 .et-title {
   font-family: 'Open Sans Bold'; }
+  .et-title h1 {
+    font-size: 6em;
+    line-height: 1.5; }
+
+.et-img-profile {
+  border-radius: 50%;
+  height: 500px;
+  opacity: .3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 500px;
+  z-index: 0; }
 
 .et-text {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  z-index: 2; }
 
 .et-buttons {
   justify-content: center; }
