@@ -1,9 +1,2 @@
 .DS_Store
 node_modules
-./src/action-creators
-./src/actions
-./src/components
-./src/reducers
-./src/store
-./src/utils
-index.js
