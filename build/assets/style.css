@@ -1,35 +1,289 @@
+@charset "UTF-8";
 @font-face {
-  font-family: 'Open Sans Bold';
+  font-family: 'Open Sans';
   src: url("../../assets/styles/fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype"); }
 
-.et-img-portfolio {
-  width: 100%; }
+@font-face {
+  font-family: 'EB_Garamond';
+  src: url("../../assets/styles/fonts/EB_Garamond/EBGaramond-Regular.ttf") format("truetype"); }
 
-.et-title {
-  font-family: 'Open Sans Bold'; }
-  .et-title h1 {
-    font-size: 6em;
-    line-height: 1.5; }
+body {
+  font-size: 1em;
+  font-family: "EB_Garamond"; }
 
-.et-img-profile {
-  border-radius: 50%;
-  height: 500px;
-  opacity: .3;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+h2 {
+  font-size: 1.2em; }
+
+.Narcisa-list--star li:before {
+  padding-right: .5em;
+  content: "\2605"; }
+
+.Narcisa-list--star-emoji li:before {
+  padding-right: .5em;
+  content: "⭐"; }
+
+.Narcisa-list--microphone-emoji li:before {
+  padding-right: .5em;
+  content: "🎤"; }
+
+.Narcisa-grid {
+  display: grid;
+  grid-template-rows: auto; }
+
+.Narcisa-header {
+  display: grid;
+  grid-template-columns: 15% 85%; }
+
+.Narcisa-header--right {
+  display: grid;
+  grid-template-rows: 40% 60%; }
+
+.Narcisa-info {
+  display: grid;
+  grid-template-columns: 30% 40% 30%; }
+
+.Narcisa-info--left {
+  display: grid;
+  grid-template-rows: 130px 15% 50%; }
+
+.Narcisa-info--middle {
+  display: grid;
+  grid-template-rows: 40% 50%; }
+
+.Narcisa-info--right {
+  display: grid;
+  grid-template-rows: 20% auto; }
+
+@media (max-width: 900px) {
+  .Narcisa-grid,
+  .Narcisa-header,
+  .Narcisa-header--right,
+  .Narcisa-info,
+  .Narcisa-info-left {
+    display: block; } }
+
+.Narcisa-box {
+  background-color: white;
+  border-radius: 5px;
+  border: .5px solid black;
+  box-sizing: border-box;
+  margin: .5em;
+  padding: 1em; }
+  .Narcisa-box ul {
+    padding: 0;
+    margin: 0; }
+  .Narcisa-box li {
+    margin: .5em 0; }
+
+.Narcisa-box-monster {
+  display: block;
+  border: none; }
+  .Narcisa-box-monster p {
+    text-align: center; }
+
+.Narcisa-box-video iframe {
+  display: block;
+  width: 100%;
+  min-height: 320px; }
+
+.Narcisa-box-profile-picture {
+  border-radius: 50% 0; }
+  .Narcisa-box-profile-picture img {
+    border-radius: inherit;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%; }
+
+.Narcisa-box-about {
+  display: grid;
+  align-items: center; }
+
+.Narcisa-box-social-networks {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  align-items: center; }
+
+.Narcisa-box-spotify {
+  background-color: #282828; }
+  .Narcisa-box-spotify iframe {
+    box-sizing: border-box;
+    display: block;
+    height: 80px;
+    margin: 0 auto;
+    margin: 0;
+    width: 100%; }
+
+.Narcisa-box-instagram iframe {
+  border: none; }
+
+@media (max-width: 900px) {
+  .Narcisa-box {
+    display: block; }
+  .Narcisa-box-instagram {
+    text-align: center; }
+    .Narcisa-box-instagram iframe {
+      max-width: 300px !important;
+      margin: 0 auto !important;
+      border: none !important; }
+  .Narcisa-box-video iframe {
+    margin: 2em auto; }
+  .Narcisa-box-twitter {
+    text-align: center; }
+    .Narcisa-box-twitter iframe {
+      max-width: 300px !important;
+      margin: 0 auto !important; }
+  .Narcisa-box-profile-picture {
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto; } }
+
+.monster {
+  width: 200px;
+  height: 200px;
+  background-color: #731fbd;
+  border-radius: 50% 50% 10% 10%;
+  position: relative;
+  margin: 2.5em auto 1em auto; }
+
+.horn {
+  width: 30px;
+  height: 30px;
+  background-color: #00dc24;
   position: absolute;
-  right: 0;
+  border-radius: 0 0 50% 50%;
+  top: 20px;
+  box-shadow: 0 5px 0 #3e1165;
+  background-size: 10px;
+  background-image: linear-gradient(0deg, #00c320 5px, transparent 0);
+  background-repeat: repeat; }
+
+.horn.horn-left {
+  left: 20px;
+  transform: rotate(-45deg);
+  z-index: 1; }
+  .horn.horn-left:before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-left: 30px solid #00c320;
+    border-radius: 100% 0 0 0;
+    bottom: 30px; }
+
+.horn.horn-right {
+  right: 20px;
+  transform: rotate(45deg); }
+  .horn.horn-right:before {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-left: 30px solid #00c320;
+    border-radius: 0 0 0 100%;
+    bottom: 30px;
+    right: 0;
+    transform: rotate(180deg); }
+
+.eyes {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  padding: 60px 0 10px 0; }
+
+.eye {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin: 0 15px;
+  position: relative;
+  border-bottom: 10px solid #581891; }
+
+.eye.eye-medium::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  border-radius: 100px 100px 0 0;
+  background-color: #4b147b;
   top: 0;
-  width: 500px;
-  z-index: 0; }
+  left: 0;
+  animation: closeEyes 3s infinite; }
 
-.et-text {
-  font-size: 1.8em;
-  z-index: 2; }
+.eye.eye-closed::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px 100px 0 0;
+  background-color: #4b147b;
+  top: 0; }
 
-.et-buttons {
-  justify-content: center; }
+.eye::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px; }
 
-@media all and (max-width: 993px) {
-  .et-text {
-    font-size: 1em; }
-  .et-header h1 {
-    font-size: 2em; } }
+.mouth {
+  background-color: #23093a;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 25% 25% 50% 50%;
+  position: relative; }
+
+.mouth:before {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background-color: red;
+  bottom: -1px;
+  border-radius: inherit;
+  left: 35px; }
+
+.mouth:after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background-color: transparent;
+  background-size: 30px 100%;
+  background-image: linear-gradient(45deg, yellow 10px, transparent 0), linear-gradient(-45deg, yellow 10px, transparent 0), linear-gradient(135deg, yellow 10px, transparent 0), linear-gradient(-135deg, yellow 10px, transparent 0);
+  background-repeat: repeat;
+  border-radius: inherit; }
+
+@keyframes closeEyes {
+  0% {
+    height: 25px; }
+  5% {
+    height: 40px; }
+  7% {
+    height: 25px; }
+  9% {
+    height: 40px; }
+  11% {
+    height: 25px; } }

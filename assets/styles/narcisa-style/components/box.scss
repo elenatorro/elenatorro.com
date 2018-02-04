@@ -1,0 +1,130 @@
+.Narcisa-box {
+  background-color: white;
+  border-radius: 5px;
+  border: .5px solid black;
+  box-sizing: border-box;
+  margin: .5em;
+  padding: 1em;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: .5em 0;
+  }
+}
+
+.Narcisa-box-monster {
+  display: block;
+  border: none;
+
+  p {
+    text-align: center;
+  }
+}
+
+.Narcisa-box-video {
+  iframe {
+    display: block;
+    width: 100%;
+    min-height: 320px;
+  }
+}
+
+.Narcisa-box-profile-picture {
+  border-radius: 50% 0;
+
+  img {
+    border-radius: inherit;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.Narcisa-box-about {
+  display: grid;
+  align-items: center;
+}
+
+.Narcisa-box-social-networks {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  justify-items: center;
+  align-items: center;
+}
+
+.Narcisa-box-current-projects {
+
+}
+
+.Narcisa-box-spotify {
+  background-color: #282828;
+
+  iframe {
+    box-sizing: border-box;
+    display: block;
+    height: 80px;
+    margin: 0 auto;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.Narcisa-box-tour-dates {
+}
+
+.Narcisa-box-instagram {
+  iframe {
+    border: none;
+  }
+}
+
+.Narcisa-box-codepen {
+
+}
+
+.Narcisa-box-weekly {
+
+}
+
+@media (max-width: 900px) {
+  .Narcisa-box {
+    display: block;
+  }
+
+  .Narcisa-box-instagram {
+    text-align: center;
+
+    iframe {
+      max-width: 300px !important;
+      margin: 0 auto !important;
+      border: none !important;
+    }
+  }
+
+  .Narcisa-box-video {
+    iframe {
+      margin: 2em auto;
+    }
+  }
+
+  .Narcisa-box-twitter {
+    text-align: center;
+
+    iframe {
+      max-width: 300px !important;
+      margin: 0 auto !important;
+    }
+  }
+
+  .Narcisa-box-profile-picture {
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+  }
+}

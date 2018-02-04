@@ -1,0 +1,46 @@
+.Narcisa-grid {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.Narcisa-header {
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+.Narcisa-header--right {
+  display: grid;
+  grid-template-rows: 40% 60%;
+}
+
+
+.Narcisa-info {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+}
+
+.Narcisa-info--left {
+  display: grid;
+  grid-template-rows: 130px 15% 50%;
+}
+
+.Narcisa-info--middle {
+  display: grid;
+  grid-template-rows: 40% 50%;
+}
+
+.Narcisa-info--right {
+  display: grid;
+  grid-template-rows: 20% auto;
+}
+
+
+@media (max-width: 900px) {
+  .Narcisa-grid,
+  .Narcisa-header,
+  .Narcisa-header--right,
+  .Narcisa-info,
+  .Narcisa-info-left {
+    display: block;
+  }
+}

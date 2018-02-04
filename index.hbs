@@ -5,16 +5,42 @@
 
   <body>
 
-    {{> header }}
+    <section class="Narcisa-grid">
+      <section class="Narcisa-header">
+        {{> box_profile_picture }}
 
-    <section class="pk-bdr-l-all pk-bdr-purple600">
-      {{> about }}
+        <section class="Narcisa-header--right">
+          {{> box_social_networks }}
+          {{> box_about }}
+        </section>
 
-      {{> projects }}
+      </section>
 
-      {{> talks }}
+      <section class="Narcisa-info">
+        <section class="Narcisa-info--left">
+          {{> box_spotify }}
 
-      {{> contact }}
+          {{> box_tour_dates }}
+
+          {{> box_twitter }}
+        </section>
+
+        <section class="Narcisa-info-middle">
+          {{> box_projects }}
+
+          {{> box_video }}
+        </section>
+
+        <section class="Narcisa-info-right">
+          {{> box_instagram }}
+
+          {{> box_monster }}
+        </section>
+      </section>
+
+      <section class="Narcisa-info">
+      </section>
+
     </section>
   </body>
 
