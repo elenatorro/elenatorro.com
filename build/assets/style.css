@@ -36,7 +36,8 @@ h2 {
 
 .Narcisa-grid {
   display: grid;
-  grid-template-rows: auto; }
+  grid-template-rows: auto;
+  padding: 1em 3em; }
 
 .Narcisa-header {
   display: grid;
@@ -78,14 +79,14 @@ h2 {
   margin: .5em;
   padding: 1em; }
   .Narcisa-box ul {
-    padding: 0;
-    margin: 0; }
+    margin: 0;
+    padding: 0; }
   .Narcisa-box li {
     margin: .5em 0; }
 
 .Narcisa-box-monster {
-  display: block;
-  border: none; }
+  border: none;
+  display: block; }
   .Narcisa-box-monster p {
     text-align: center; }
 
@@ -95,12 +96,21 @@ h2 {
   min-height: 320px; }
 
 .Narcisa-box-profile-picture {
-  border-radius: 50% 0; }
-  .Narcisa-box-profile-picture img {
+  border-radius: 50% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  min-width: 150px;
+  height: auto; }
+  .Narcisa-box-profile-picture .Narcisa-box-profile-picture--image {
+    background-image: url("/assets/images/elenatorro_profile.png");
+    background-position: center;
+    background-size: cover;
     border-radius: inherit;
     border: 1px solid black;
     box-sizing: border-box;
-    height: auto;
+    height: 100%;
     width: 100%; }
 
 .Narcisa-box-about {
@@ -108,10 +118,10 @@ h2 {
   align-items: center; }
 
 .Narcisa-box-social-networks {
+  align-items: center;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  justify-items: center;
-  align-items: center; }
+  justify-items: center; }
 
 .Narcisa-box-spotify {
   background-color: #282828; }
@@ -124,7 +134,8 @@ h2 {
     width: 100%; }
 
 .Narcisa-box-instagram iframe {
-  border: none; }
+  border: none !important;
+  margin: 0 auto !important; }
 
 @media (max-width: 900px) {
   .Narcisa-box {
@@ -132,9 +143,7 @@ h2 {
   .Narcisa-box-instagram {
     text-align: center; }
     .Narcisa-box-instagram iframe {
-      max-width: 300px !important;
-      margin: 0 auto !important;
-      border: none !important; }
+      max-width: 300px !important; }
   .Narcisa-box-video iframe {
     margin: 2em auto; }
   .Narcisa-box-twitter {
@@ -143,10 +152,10 @@ h2 {
       max-width: 300px !important;
       margin: 0 auto !important; }
   .Narcisa-box-profile-picture {
-    text-align: center;
+    display: flex;
     height: 200px;
     width: 200px;
-    margin: 0 auto; } }
+    margin: 1.5em auto 2.5em auto; } }
 
 .monster {
   width: 200px;

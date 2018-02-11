@@ -7,8 +7,8 @@
   padding: 1em;
 
   ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   li {
@@ -17,8 +17,8 @@
 }
 
 .Narcisa-box-monster {
-  display: block;
   border: none;
+  display: block;
 
   p {
     text-align: center;
@@ -35,12 +35,21 @@
 
 .Narcisa-box-profile-picture {
   border-radius: 50% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  min-width: 150px;
+  height: auto;
 
-  img {
+  .Narcisa-box-profile-picture--image {
+    background-image: url('/assets/images/elenatorro_profile.png');
+    background-position: center;
+    background-size: cover;
     border-radius: inherit;
     border: 1px solid black;
     box-sizing: border-box;
-    height: auto;
+    height: 100%;
     width: 100%;
   }
 }
@@ -51,10 +60,10 @@
 }
 
 .Narcisa-box-social-networks {
+  align-items: center;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   justify-items: center;
-  align-items: center;
 }
 
 .Narcisa-box-current-projects {
@@ -79,7 +88,8 @@
 
 .Narcisa-box-instagram {
   iframe {
-    border: none;
+    border: none !important;
+    margin: 0 auto !important;
   }
 }
 
@@ -101,8 +111,6 @@
 
     iframe {
       max-width: 300px !important;
-      margin: 0 auto !important;
-      border: none !important;
     }
   }
 
@@ -122,9 +130,9 @@
   }
 
   .Narcisa-box-profile-picture {
-    text-align: center;
+    display: flex;
     height: 200px;
     width: 200px;
-    margin: 0 auto;
+    margin: 1.5em auto 2.5em auto;
   }
 }
