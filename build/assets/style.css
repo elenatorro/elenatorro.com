@@ -123,15 +123,13 @@ h2 {
   grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
   justify-items: center; }
 
-.Narcisa-box-spotify {
-  background-color: #282828; }
-  .Narcisa-box-spotify iframe {
-    box-sizing: border-box;
-    display: block;
-    height: 80px;
-    margin: 0 auto;
-    margin: 0;
-    width: 100%; }
+.Narcisa-box-spotify iframe {
+  box-sizing: border-box;
+  display: block;
+  height: 80px;
+  margin: 0 auto;
+  margin: 0;
+  width: 100%; }
 
 .Narcisa-box-instagram iframe {
   border: none !important;
