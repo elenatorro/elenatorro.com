@@ -37,11 +37,13 @@ h2 {
 .Narcisa-grid {
   display: grid;
   grid-template-rows: auto;
-  padding: 1em 3em; }
+  padding: 1em;
+  max-width: 900px;
+  margin: 0 auto; }
 
 .Narcisa-header {
   display: grid;
-  grid-template-columns: 15% 85%; }
+  grid-template-columns: 200px auto; }
 
 .Narcisa-header--right {
   display: grid;
@@ -53,7 +55,7 @@ h2 {
 
 .Narcisa-info--left {
   display: grid;
-  grid-template-rows: 130px 15% 50%; }
+  grid-template-rows: auto; }
 
 .Narcisa-info--middle {
   display: grid;
@@ -61,7 +63,7 @@ h2 {
 
 .Narcisa-info--right {
   display: grid;
-  grid-template-rows: 20% auto; }
+  grid-template-rows: 130px 15% 50%; }
 
 @media (max-width: 900px) {
   .Narcisa-grid,
@@ -101,7 +103,7 @@ h2 {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  min-width: 150px;
+  min-width: 180px;
   height: auto; }
   .Narcisa-box-profile-picture .Narcisa-box-profile-picture--image {
     background-image: url("/assets/images/elenatorro_profile.png");
