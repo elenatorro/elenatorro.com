@@ -1,10 +1,15 @@
 .Narcisa-box {
   background-color: white;
-  border-radius: 5px;
-  border: .5px solid black;
   box-sizing: border-box;
-  margin: .5em;
+  margin: 0;
   padding: 1em;
+  width: 100%;
+
+  a {
+    &:hover {
+      color: #00dd00;
+    }
+  }
 
   ul {
     margin: 0;
@@ -34,20 +39,14 @@
 }
 
 .Narcisa-box-profile-picture {
-  border-radius: 50% 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  min-width: 180px;
-  height: auto;
 
   .Narcisa-box-profile-picture--image {
     background-image: url('/assets/images/elenatorro_profile.png');
     background-position: center;
     background-size: cover;
-    border-radius: inherit;
-    border: 1px solid black;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -57,17 +56,18 @@
 .Narcisa-box-about {
   display: grid;
   align-items: center;
+  font-size: 2em;
+  padding: .5em;
+
+  p {
+    margin: .5em auto;
+  }
 }
 
 .Narcisa-box-social-networks {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
-  justify-items: center;
-}
-
-.Narcisa-box-current-projects {
-
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
 }
 
 .Narcisa-box-spotify {
@@ -91,17 +91,13 @@
   }
 }
 
-.Narcisa-box-codepen {
-
-}
-
-.Narcisa-box-weekly {
-
-}
-
 @media (max-width: 900px) {
   .Narcisa-box {
     display: block;
+  }
+
+  .Narcisa-box-social-networks {
+    text-align: left;
   }
 
   .Narcisa-box-instagram {

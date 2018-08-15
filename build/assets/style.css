@@ -9,7 +9,7 @@
 
 body {
   font-size: 1em;
-  font-family: "EB_Garamond"; }
+  font-family: "Open Sans"; }
 
 h1,
 h2,
@@ -47,7 +47,7 @@ h2 {
 
 .Narcisa-header--right {
   display: grid;
-  grid-template-rows: 40% 60%; }
+  grid-template-rows: none; }
 
 .Narcisa-info {
   display: grid;
@@ -75,11 +75,12 @@ h2 {
 
 .Narcisa-box {
   background-color: white;
-  border-radius: 5px;
-  border: .5px solid black;
   box-sizing: border-box;
-  margin: .5em;
-  padding: 1em; }
+  margin: 0;
+  padding: 1em;
+  width: 100%; }
+  .Narcisa-box a:hover {
+    color: #00dd00; }
   .Narcisa-box ul {
     margin: 0;
     padding: 0; }
@@ -98,32 +99,29 @@ h2 {
   min-height: 320px; }
 
 .Narcisa-box-profile-picture {
-  border-radius: 50% 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  min-width: 180px;
-  height: auto; }
+  align-items: center; }
   .Narcisa-box-profile-picture .Narcisa-box-profile-picture--image {
     background-image: url("/assets/images/elenatorro_profile.png");
     background-position: center;
     background-size: cover;
-    border-radius: inherit;
-    border: 1px solid black;
     box-sizing: border-box;
     height: 100%;
     width: 100%; }
 
 .Narcisa-box-about {
   display: grid;
-  align-items: center; }
+  align-items: center;
+  font-size: 2em;
+  padding: .5em; }
+  .Narcisa-box-about p {
+    margin: .5em auto; }
 
 .Narcisa-box-social-networks {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 16.67% 16.67% 16.67% 16.67% 16.67% 16.67%;
-  justify-items: center; }
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em; }
 
 .Narcisa-box-spotify iframe {
   box-sizing: border-box;
@@ -140,6 +138,8 @@ h2 {
 @media (max-width: 900px) {
   .Narcisa-box {
     display: block; }
+  .Narcisa-box-social-networks {
+    text-align: left; }
   .Narcisa-box-instagram {
     text-align: center; }
     .Narcisa-box-instagram iframe {
