@@ -3,7 +3,7 @@
   grid-template-rows: auto;
   padding: 1em;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 5em auto 0 auto;
 }
 
 .Narcisa-header {
@@ -34,10 +34,28 @@
 
 .Narcisa-info--right {
   display: grid;
-  // grid-template-rows: 20% auto;
   grid-template-rows: 130px 15% 50%;
 }
 
+.Narcisa-card-background {
+  background-color: #272822;
+  background-image: url("/assets/images/to-do-large.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (max-width: 600px) {
+  .Narcisa-card-background {
+    background-position: 20px -10px;
+    height: 200px;
+    background-size: 500px;
+  }
+}
 
 @media (max-width: 900px) {
   .Narcisa-grid,
