@@ -49,11 +49,10 @@
   z-index: -1;
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .Narcisa-card-background {
-    background-position: 20px -10px;
-    height: 200px;
-    background-size: 500px;
+    background-position: 250px;
+    height: 500px;
   }
 }
 

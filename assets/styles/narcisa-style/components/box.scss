@@ -83,7 +83,15 @@
   }
 }
 
-.Narcisa-box-tour-dates {
+.Narcisa-box-social-networks {
+  a {
+    text-decoration: none;
+    font-size: 3em;
+  }
+
+  .Narcisa-box-social-networks--name {
+    display: none;
+  }
 }
 
 .Narcisa-box-instagram {
@@ -105,22 +113,31 @@
   z-index: -1;
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .Narcisa-box {
     display: block;
   }
 
   .Narcisa-box-social-networks {
-    font-size: 1.5em;
     padding: .5em;
-  }
 
-  .Narcisa-box-social-networks {
-    text-align: left;
+    a {
+      font-size: 1.5em;
+    }
+
+    .Narcisa-box-social-networks--name {
+      display: inline;
+      margin-left: .5em;
+    }
   }
 
   .Narcisa-box-profile-picture {
     height: auto;
-    width: 200px;
+    width: 500px;
+  }
+
+  .Narcisa-card-background {
+    background-position: 250px;
+    height: 350px;
   }
 }
