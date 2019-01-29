@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Open Sans';
-  src: url("../../assets/styles/fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype"); }
+  src: url("../../assets/styles/fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'EB_Garamond';
@@ -9,6 +9,7 @@
 
 body {
   font-size: 1em;
+  font-weight: 100;
   font-family: "Open Sans"; }
 
 h1,
