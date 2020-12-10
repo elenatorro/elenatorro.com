@@ -16,7 +16,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babelify": "^7.3.0",
     "browserify": "^16.2.3",
-    "gulp": "3.9.1",
+    "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
@@ -27,8 +27,15 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
+    "node-sass": "^5.0.0",
     "tootik": "^1.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   }
 }
