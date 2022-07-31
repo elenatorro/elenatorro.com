@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aneel Rotor</title>
+    <meta name="description" content="Sitio personal donde comparto relatos y otros escritos.">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-base16-monokai.dark.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Aneel Rotor">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Aneel Rotor">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet"> 
+  </head>
+
+  <body>
+    <header>
+      <ul class="nav">
+        <li class="nav-item"><a href="/">Inicio</a></li>
+        <li class="nav-item"><a href="/sobre-mi/">Sobre mí</a></li>
+        <li class="nav-item"><a href="/proyectos/">Proyectos</a></li>
+      </ul>
+      <div class="toggle-container">
+      <label id="toggle-theme" class="switch">
+        <input type="checkbox" id="theme-switch" role="switch" aria-label="Switch between dark mode and light mode">
+        <span class="slider round"></span>
+      </label>
+      </div>
+    </header>
+
+    <main class="tmpl-home">
+      
+<div class="post-content">
+  <table>
+  <thead>
+    <tr>
+      <th>URL</th>
+      <th>Page Title</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><a href="/proyectos/"><code>/proyectos/</code></a></td>
+    <td>Proyectos</td>
+  </tr>
+  <tr>
+    <td><a href="/proyectos/la-era-de-los-cambiantes/"><code>/proyectos/la-era-de-los-cambiantes/</code></a></td>
+    <td>La era de los cambiantes</td>
+  </tr>
+  <tr>
+    <td><a href="/proyectos/magia-arcana/"><code>/proyectos/magia-arcana/</code></a></td>
+    <td>Magia Arcana I</td>
+  </tr>
+  <tr>
+    <td><a href="/proyectos/proyecto-kernel/"><code>/proyectos/proyecto-kernel/</code></a></td>
+    <td>Proyecto Kernel</td>
+  </tr>
+  <tr>
+    <td><a href="/sobre-mi/"><code>/sobre-mi/</code></a></td>
+    <td>Sobre mí</td>
+  </tr>
+  <tr>
+    <td><a href="/relatos/una-capa-para-la-parca/"><code>/relatos/una-capa-para-la-parca/</code></a></td>
+    <td>Una capa para La Parca</td>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+
+    </main>
+
+    
+
+    <script>
+      
+      function toggle() {
+  const body = document.body
+  const theme = localStorage.getItem('theme')
+
+  if (theme && theme === 'dark-mode') {
+    body.classList.remove('dark-mode')
+    body.classList.add('light-mode')
+    localStorage.setItem('theme', 'light-mode')
+  } else {
+    body.classList.add('dark-mode')
+    body.classList.remove('light-mode')
+    localStorage.setItem('theme', 'dark-mode')
+  }
+}
+
+(function() {
+  const theme = localStorage.getItem('theme') || 'light-mode'
+  const body = document.body
+  const toggleButton = document.getElementById('theme-switch')
+
+  body.classList.add(theme)
+
+  if (theme && theme === 'light-mode') {
+    toggleButton.setAttribute('checked', true)
+  }
+    
+  toggleButton.addEventListener('change', toggle)
+})()
+
+      function track() {
+  const url = '/.netlify/functions/track'
+  const currentDate = new Date(Date.now())
+  const theme = localStorage.getItem('theme')
+
+  const data = {
+    'event': 'load',
+    'timestamp': currentDate.toISOString(),
+    'language': navigator.language || 'unknown',
+    'languages': JSON.stringify(navigator.languages) || 'unknown',
+    'useragent': navigator.userAgent || 'unknown',
+    'referrer': document.referrer || 'unknown',
+    'href': location.href || 'unknown',
+    'origin': location.origin || 'unknown',
+    'screenx': window.screenX || 0,
+    'screeny': window.screenY || 0,
+    'theme': theme || 'light-mode'
+  }
+
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
+}
+
+(function() {
+  window.onload = track
+})()
+
+    
+    </script>
+  </body>
+</html>

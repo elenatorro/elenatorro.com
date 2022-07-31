@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Elena Torró</title>
+	<subtitle></subtitle>
+	
+	<link href="https://elenatorro.com/feed/feed.xml" rel="self"/>
+	<link href="https://elenatorro.com/"/>
+	<updated>2022-07-31T19:25:36Z</updated>
+	<id>https://elenatorro.com/</id>
+	<author>
+		<name>Elena Torró</name>
+		<email></email>
+	</author>
+</feed>

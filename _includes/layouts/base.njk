@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or metadata.title }}</title>
+    <meta name="description" content="{{ description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+    <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <ul class="nav">
+      {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+      {%- endfor %}
+      </ul>
+      <div class="toggle-container">
+        <label id="toggle-theme" class="switch">
+          <input type="checkbox" id="theme-switch" role="switch" aria-label="Switch between dark mode and light mode">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </header>
+
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+    </main>
+
+    {% set js %}
+      {% include "scripts/dark-mode.js" %}
+      {% include "scripts/track.js" %}
+    {% endset %}
+
+    <script>
+      {{ js | safe }}
+    </script>
+  </body>
+</html>

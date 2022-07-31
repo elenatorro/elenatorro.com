@@ -1,0 +1,20 @@
+{
+  "title": "Elena Torró",
+  "url": "https://elenatorro.com/",
+  "language": "es",
+  "description": "Elena Torró's personal site",
+  "feed": {
+    "description": "Elena Torró's personal site",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://elenatorro.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://elenatorro.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Elena Torró",
+    "url": "https://elenatorro.com"
+  }
+}

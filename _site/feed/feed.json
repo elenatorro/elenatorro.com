@@ -1,0 +1,14 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Elena Torró",
+  "language": "es",
+  "home_page_url": "https://elenatorro.com/",
+  "feed_url": "https://elenatorro.com/feed/feed.json",
+  "description": "Elena Torró&#39;s personal site",
+  "author": {
+    "name": "Elena Torró",
+    "url": "https://elenatorro.com"
+  },
+  "items": [
+  ]
+}

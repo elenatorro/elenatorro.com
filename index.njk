@@ -1,0 +1,23 @@
+---
+layout: layouts/home.njk
+title: Home
+eleventyNavigation:
+  key: 🪐 Home
+  order: 1
+---
+
+<h1 class="">Elena Torró</h1>
+
+<h2>this is just another personal site, don't take it too seriously</h2>
+<sub><a href="/es/home">léelo en español</a></sub>
+
+<section class="home">
+  <p>Hi, this is Elena 👋</p>
+  <p>I'm a Multimedia Engineer born in Murcia, a Region in Spain where you can find delicious lemons 🍋 and beautiful arid landscapes ⛰️</p>
+  <p>I love building tech tools others can use, and that's one of the reasons why I've joined <a href="https://tinybird.co" target="_blank">Tinybird</a>'s flock 🐥</p>
+  <p>I have a project with my friends, <a href="https://droidsanddruids.com/" target="_blank">Droids & Druids</a> 🤖💓🧙‍♀️, where we talk (in Spanish) about literature, films, comics, videogames... within the framework of sci-fi, fantasy and terror genres</p>
+  <p>I also enjoy water sports 🏄, practicing karate 🥋, playing the piano 🎶, solving and creating riddles 🧩, and <a href="https://escritopor.elenatorro.com" target="_blank">writing</a> ☄️ 🛸 stories, among others</p>
+</section>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
