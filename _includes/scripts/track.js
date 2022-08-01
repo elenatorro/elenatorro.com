@@ -56,11 +56,11 @@ async function track() {
   const theme = localStorage.getItem('theme')
 
   const data = {
+    'fingerprint': fngrprt || 'unknown',
     'event': 'load',
-    'fingerprint': fngrprt,
     'timestamp': currentDate.toISOString(),
     'language': navigator.language || 'unknown',
-    'languages': JSON.stringify(navigator.languages) || 'unknown',
+    'languages': 'none',
     'useragent': navigator.userAgent || 'unknown',
     'referrer': document.referrer || 'unknown',
     'href': location.href || 'unknown',
