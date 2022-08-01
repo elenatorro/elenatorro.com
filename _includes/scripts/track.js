@@ -1,7 +1,7 @@
 async function fingerprint() {
   const url = '/.netlify/functions/ip'
   const res = await fetch(url)
-  console.log('@@@ res', info)
+  console.log('@@@ res', res)
   const info = await res.json()
   console.log('@@@ info', info)
 }
