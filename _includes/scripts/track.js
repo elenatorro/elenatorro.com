@@ -6,7 +6,7 @@ async function fingerprint() {
   console.log('@@@ info', info)
 }
 
-function track() {
+async function track() {
   await fingerprint()
   const url = '/.netlify/functions/track'
   const currentDate = new Date(Date.now())
