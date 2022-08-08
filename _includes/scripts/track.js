@@ -6,7 +6,13 @@ function toUInt32(x) {
   return modulo(parseInt(x), Math.pow(2, 32))
 }
 
-async function getInfo() {
+async function getGeolocation() {
+  const url = 'https://elenatorro/geo'
+  const res = await fetch(url)
+  return await res.json()
+}
+
+async function getIp() {
   const url = '/.netlify/functions/ip'
   const res = await fetch(url)
   return await res.json()
@@ -25,7 +31,7 @@ async function getHash(source) {
 }
 
 async function getFingerprint() {
-  const { ip } = await getInfo()
+  const ip = await getIp()
   const canvas = document.getElementById("cnvs")
   const ctx = canvas.getContext("2d")
 
@@ -67,8 +73,8 @@ async function getFingerprint() {
 }
 
 async function track() {
-  const { geo } = await getInfo()
   let fngrprt = toUInt32(localStorage.getItem('fingerprint', 0))
+  const geo = await getGeolocation()
 
   try {
     if (!fngrprt) {

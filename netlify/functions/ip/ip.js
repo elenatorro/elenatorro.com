@@ -4,14 +4,6 @@
  * a requests to this function.
  */
  exports.handler = async (event) => {
-  const DEFAULT_GEO = {
-    city: 'unknown',
-    country: {
-      code: 'unknown',
-      name: 'unknown'
-    }
-  }
-
   return {
     statusCode: 200,
     headers: {
@@ -23,11 +15,7 @@
       ip:
         event.headers['x-nf-client-connection-ip'] !== '::1'
           ? event.headers['x-nf-client-connection-ip']
-          : '127.0.0.1',
-      geo:
-        event.headers['x-nf-geo'] !== '::1'
-          ? event.headers['x-nf-geo']
-          : DEFAULT_GEO
+          : '127.0.0.1'
     }),
   }
 }
