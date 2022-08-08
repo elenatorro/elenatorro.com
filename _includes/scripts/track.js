@@ -10,7 +10,7 @@ async function getIp() {
   return await res.json()
 }
 
-async function getHash(source) {
+function getHash(source) {
   let hash = 0
 
   for (i = 0; i < source.length; i++) {
@@ -73,7 +73,7 @@ async function track() {
       fngrprt = await getFingerprint()
     }
   } catch {
-    fngrprt = 0
+    fngrprt = 'unknown'
   }
 
   const url = '/.netlify/functions/track'
