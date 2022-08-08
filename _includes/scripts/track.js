@@ -6,13 +6,7 @@ function toUInt32(x) {
   return modulo(parseInt(x), Math.pow(2, 32))
 }
 
-async function getGeolocation() {
-  const url = '/.netlify/functions/geo'
-  const res = await fetch(url)
-  return await res.json()
-}
-
-async function getIp() {
+async function getInfo() {
   const url = '/.netlify/functions/ip'
   const res = await fetch(url)
   return await res.json()
@@ -22,7 +16,7 @@ async function getHash(source) {
   let hash = 0
 
   for (i = 0; i < source.length; i++) {
-    char = src.charCodeAt(i)
+    char = source.charCodeAt(i)
     hash = ((hash<<5)-hash)+char
     hash = hash & hash
   }
@@ -31,7 +25,7 @@ async function getHash(source) {
 }
 
 async function getFingerprint() {
-  const ip = await getIp()
+  const { ip } = await getInfo()
   const canvas = document.getElementById("cnvs")
   const ctx = canvas.getContext("2d")
 
@@ -73,8 +67,8 @@ async function getFingerprint() {
 }
 
 async function track() {
+  const { geo } = await getInfo()
   let fngrprt = toUInt32(localStorage.getItem('fingerprint', 0))
-  let geo = {}
 
   try {
     if (!fngrprt) {
@@ -83,8 +77,6 @@ async function track() {
   } catch {
     fngrprt = 0
   }
-
-  geo = await getGeolocation()
 
   const url = '/.netlify/functions/track'
   const currentDate = new Date(Date.now())
