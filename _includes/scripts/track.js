@@ -7,7 +7,7 @@ function toUInt32(x) {
 }
 
 async function getGeolocation() {
-  const url = 'https://elenatorro/geo'
+  const url = 'https://elenatorro.com/geo'
   const res = await fetch(url)
   return await res.json()
 }
