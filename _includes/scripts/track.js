@@ -80,7 +80,7 @@ async function track() {
   const currentDate = new Date(Date.now())
   const theme = localStorage.getItem('theme')
   const data = {
-    'fingerprint': fngrprt || 'unknown',
+    'fingerprint': !!fngrprt ? fngrprt : 'unknown',
     'event': 'load',
     'timestamp': currentDate.toISOString(),
     'language': navigator.language || 'unknown',
