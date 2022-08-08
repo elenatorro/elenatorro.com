@@ -74,7 +74,7 @@ async function getFingerprint() {
 
 async function track() {
   let fngrprt = toUInt32(localStorage.getItem('fingerprint', 0))
-  const geo = await getGeolocation()
+  const { geo } = await getGeolocation()
 
   try {
     if (!fngrprt) {
