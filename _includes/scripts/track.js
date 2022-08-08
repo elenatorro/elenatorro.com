@@ -2,7 +2,7 @@ function modulo(a, b) {
   return a - Math.floor(a/b)*b
 }
 
-function toUint32(x) {
+function toUInt32(x) {
   return modulo(parseInt(x), Math.pow(2, 32))
 }
 
