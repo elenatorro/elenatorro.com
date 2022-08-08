@@ -1,11 +1,3 @@
-function modulo(a, b) {
-  return a - Math.floor(a/b)*b
-}
-
-function toUInt32(x) {
-  return modulo(parseInt(x), Math.pow(2, 32))
-}
-
 async function getGeolocation() {
   const url = 'https://elenatorro.com/geo'
   const res = await fetch(url)
@@ -67,13 +59,13 @@ async function getFingerprint() {
     hash = getHash(`${navigator.language}${navigator.userAgent}`)
   }
   
-  const fngrprt = toUint32(hash)
+  const fngrprt = hash
   localStorage.setItem('fingerprint', fngrprt)
   return fngrprt
 }
 
 async function track() {
-  let fngrprt = toUInt32(localStorage.getItem('fingerprint', 0))
+  let fngrprt = localStorage.getItem('fingerprint', 'unknown')
   const { geo } = await getGeolocation()
 
   try {
