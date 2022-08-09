@@ -19,7 +19,7 @@ function getHash(source) {
     hash = hash & hash
   }
 
-  return hash
+  return `${hash}`
 }
 
 async function getFingerprint() {
