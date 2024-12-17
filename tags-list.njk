@@ -2,11 +2,24 @@
 permalink: /tags/
 layout: layouts/home.njk
 ---
-<div class="post-content">
-  <h1>Tags</h1>
 
-  {% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-    <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-  {% endfor %}
+<div class="article-layout">
+  <section class="article-content">
+    <h1>Tags</h1>
+    {{ content | safe }}
+    {%- if collections.articles %}
+    <section>
+      <ul>
+        {% for tag in collections.tagList %}
+        <li>
+          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+          <section class="post-item">
+            <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+          </section>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {%- endif %}
+  </section>
 </div>

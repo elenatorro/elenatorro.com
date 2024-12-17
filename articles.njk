@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: Articles
+templateClass: tmpl-post
+---
+
+{%- if date %}
+<time datetime="{{ page.date | htmlDateString }}">{{ date | readableDate }}</time>
+{%- endif %}
+
+<div class="article-layout">
+  <section class="article-content">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+    <section>
+      <p>Coming soon...</p>
+    </section>
+    {# {%- if collections.articles %}
+    <section>
+      <ul>
+        {%- for article in collections.articles %}
+            <li>
+              {% set itemUrl %}/articles/{{ article.data.title | slug }}/{% endset %}
+              <section class="post-item">
+                <a href="{{ itemUrl | url }}">{{article.data.title}}</a>
+                <p>{{ article.data.description }}</p>
+              </section>
+            </li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endif %} #}
+  </section>
+</div>
+
+{%- if collections.articles %}
+{%- set nextPost = collections.articles | getNextCollectionItem(page) %}
+{%- set previousPost = collections.articles | getPreviousCollectionItem(page) %}
+{%- if nextPost or previousPost %}
+<div class="footer">
+  <ul>
+    {%- if previousPost %}<li><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+    {%- if nextPost %}<li><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+  </ul>
+</div>
+{%- endif %}
+{%- endif %}

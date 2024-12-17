@@ -20,7 +20,6 @@ module.exports = function(eleventyConfig) {
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
-
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
   });
@@ -72,6 +71,20 @@ module.exports = function(eleventyConfig) {
 
     return filterTagList([...tagSet]);
   });
+
+  eleventyConfig.addCollection("articles", function(collection) {
+    const articles = new Set();
+
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => {
+        if (tag.includes('article')) {
+          articles.add(item)
+        }
+      });
+    });
+
+    return [...articles]
+  })
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");

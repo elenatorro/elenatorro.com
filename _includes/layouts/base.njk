@@ -17,9 +17,12 @@
   <body>
     <header>
       <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
+        <li class="nav-item nav-item-active"><a href="https://github.com/elenatorro">GitHub</a></li>
+        <li class="nav-item nav-item-active"><a href="https://bsky.app/profile/elenatorro.bsky.social">Bsky</a></li>
+        <li class="nav-item nav-item-active"><a href="/articles">Articles</a></li>
+        {%- for entry in collections.all | eleventyNavigation %}
+          <li class="nav-item nav-item-active"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        {%- endfor %}
       </ul>
       <div class="toggle-container">
         <label id="toggle-theme" class="switch">
@@ -31,7 +34,6 @@
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
-
       <canvas id='cnvs' width='200' height='40' style='border:1px solid #000000;'></canvas>
     </main>
 

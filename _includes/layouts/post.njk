@@ -7,34 +7,15 @@ templateClass: tmpl-post
 {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
 <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {%- endfor %}
-{# 
-  {%- if date %}
-  <time datetime="{{ page.date | htmlDateString }}">{{ date | readableDate }}</time>
-  {%- endif %} 
-#}
+{%- if date %}
+<time datetime="{{ page.date | htmlDateString }}">{{ date | readableDate }}</time>
+{%- endif %} 
 
-<p>Palabras: {{ content | wordCount }}</p>
-
-<div class="post-layout">
-  {%- if curiosities %}
-    <section class="post-content with-aside">
-      <h1>{{ title }}</h1>
-      {{ content | safe }}
-    </section>
-    <aside class="post-aside">
-      <h2>💡 Curiosidades</h2>
-      <ul>
-      {%- for curiosity in curiosities %}
-        <li>{{ curiosity }}</li>
-      {%- endfor %}
-      </ul>
-    </aside>
-  {%- else %}
-    <section class="post-content">
-      <h1>{{ title }}</h1>
-      {{ content | safe }}
-    </section>
-  {%- endif %}
+<div class="article-layout">
+  <section class="article-content">
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+  </section>
 </div>
 
 {%- if collections.posts %}
@@ -43,8 +24,8 @@ templateClass: tmpl-post
 {%- if nextPost or previousPost %}
 <div class="footer">
   <ul>
-    {%- if previousPost %}<li>Anterior: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-    {%- if nextPost %}<li>Siguiente: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+    {%- if previousPost %}<li><a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+    {%- if nextPost %}<li><a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
   </ul>
 </div>
 {%- endif %}
