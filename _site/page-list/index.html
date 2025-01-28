@@ -15,12 +15,12 @@
   </head>
 
   <body>
-    <header>
+    <nav>
       <ul class="nav">
+          <li class="nav-item nav-item-active"><a href="/">Home</a></li>
+        <li class="nav-item nav-item-active"><a href="/articles">Articles</a></li>
         <li class="nav-item nav-item-active"><a href="https://github.com/elenatorro">GitHub</a></li>
         <li class="nav-item nav-item-active"><a href="https://bsky.app/profile/elenatorro.bsky.social">Bsky</a></li>
-        <li class="nav-item nav-item-active"><a href="/articles">Articles</a></li>
-          <li class="nav-item nav-item-active"><a href="/">Home</a></li>
       </ul>
       <div class="toggle-container">
         <label id="toggle-theme" class="switch">
@@ -28,11 +28,11 @@
           <span class="slider round"></span>
         </label>
       </div>
-    </header>
+    </nav>
 
     <main class="tmpl-home">
       
-<div class="post-content">
+<section class="home-container">
   <table>
   <thead>
     <tr>
@@ -68,7 +68,7 @@
   </tbody>
 </table>
 
-</div>
+</section>
 
       <canvas id='cnvs' width='200' height='40' style='border:1px solid #000000;'></canvas>
     </main>
