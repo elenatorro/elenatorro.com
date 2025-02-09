@@ -239,16 +239,21 @@ code {
   border-radius: 50%;
   margin: auto;
   z-index: 3;
-  animation: move-in-circle-smooth 30s linear infinite;
+  /* animation: move-in-circle-smooth 30s linear infinite; */
   box-shadow: 0 0 100px 0 var(--alternative-light-opacity);
 }
+
+.home-header aside .home-header-profile-image.animated {
+  animation: move-in-circle-smooth 30s linear infinite;
+}
+
 
 .home-header-profile-image-container {
   position: relative;
   padding: 10em;
 }
 
-.home-header-profile-image-container::after {
+.home-header-profile-image-container.animated::after {
   position: absolute;
   content: "";
   width: clamp(6em, 6.5vw, max(6.5vw, 6em));
@@ -266,7 +271,7 @@ code {
   box-shadow: 0 0 100px 0 var(--alternative-light-opacity);
 }
 
-.home-header-profile-image-container::before {
+.home-header-profile-image-container.animated::before {
   position: absolute;
   content: "";
   width: clamp(4em, 4vw, max(4vw, 4em));
