@@ -17,7 +17,7 @@ templateClass: tmpl-post
       <ul class="articles-list">
         {%- for article in collections.articles %}
             <li class="article-item">
-              {% set itemUrl %}/articles/{{ article.data.title | slug }}/{% endset %}
+              {% set itemUrl %}/articles/{{article.data.date | htmlDateString }}-{{ article.data.title | slug }}/{% endset %}
               <section class="post-item">
                 <a href="{{ itemUrl | url }}">{{article.data.title}}</a>
                 {%- if article.data.date %}
