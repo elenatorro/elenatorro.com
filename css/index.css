@@ -6,20 +6,20 @@
   --white: #fff;
   --whitish: #f7f3df;
   --blackish: #131320;
-  --alternative-light: #1423ff;
+  --alternative-light: #343edb;
   --alternative-light-opacity: #1423ff30;
-  --alternative-dark: #ffcd36;
+  --alternative-dark: #e676b5;
   --switch-background: #d2d2d2;
 
   --primary-background-color: var(--whitish);
   --primary-font-color: var(--darkgray);
   --secondary-font-color: var(--blackish);
   --primary-link-color: var(--alternative-light);
-  --primary-border-color: var(--lightgray);
+  --primary-border-color: var(--alternative-dark);
 }
 
 .dark-mode {
-  --switch-background: #cd9a15;
+  --switch-background: #e676b5;
 
   --primary-background-color: var(--blackish);
   --primary-font-color: var(--lightgray);
@@ -67,16 +67,18 @@ img {
   /* 600px /16 */
 }
 
-p,
-.tmpl-post li {
-  line-height: 1.45;
+.tmpl-post time {
+  padding: 1em 0;
 }
 
 .tmpl-post ul li {
-  line-height: 1.45;
   text-decoration: none;
   list-style: none;
   margin-bottom: 1em;
+}
+
+.tmpl-post ul li.article-item {
+  padding: 1rem 0;
 }
 
 .tmpl-post ul {
@@ -418,22 +420,10 @@ code {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
-  font-size: 0.85em;
-  padding: 0.08333333333333em 0.3333333333333em;
-  /* 1px 4px /12 */
-  margin-left: 0.6666666666667em;
-  /* 8px /12 */
-  margin-top: 0.5em;
-  /* 6px /12 */
-  margin-bottom: 0.5em;
-  /* 6px /12 */
-  color: var(--primary-font-color);
-  border: 1px solid var(--gray);
-  border-radius: 0.25em;
-  /* 3px /12 */
+  font-size: 1em;
   text-decoration: none;
   line-height: 1.8;
+  padding-right: 1rem;
 }
 
 a[href].post-tag,
@@ -515,23 +505,17 @@ a[href].direct-link:focus:visited,
   display: flex;
   width: 100%;
   flex-direction: column;
+  text-align: left;
 }
 
 .article-layout {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
-  align-items: center;
-}
-
-.article-content {
-  max-width: 37em;
-}
-
-.article-content {
-  max-width: 37em;
-  text-align: left;
+  max-width: clamp(50rem, 25vw, max(100vw, 50rem));
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .post-content.with-aside {
