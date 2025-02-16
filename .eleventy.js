@@ -72,19 +72,15 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
-  eleventyConfig.addCollection("articles", function(collection) {
-    const articles = new Set();
-
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => {
-        if (tag.includes('article')) {
-          articles.add(item)
-        }
-      });
+  eleventyConfig.addCollection("sortedArticles", function (collection) {
+    return collection.getFilteredByTag("article").sort((a, b) => {
+      return b.data.date - a.data.date;
     });
+  });
 
-    return [...articles]
-  })
+  eleventyConfig.addCollection("articles", function (collection) {
+		return collection.getFilteredByTag("article");
+	});
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
