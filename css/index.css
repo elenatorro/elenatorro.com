@@ -52,9 +52,16 @@ body {
   margin: 0;
 }
 
+iframe {
+  aspect-ratio: 10 / 9; /* Adjust as needed */
+  display: flex;
+  border: 0;
+}
+
 h1 {
   margin: 0;
   font-size: 3rem;
+  line-height: 3rem;
 }
 
 p:last-child {
