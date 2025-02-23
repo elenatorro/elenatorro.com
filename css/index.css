@@ -68,9 +68,14 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.tmpl-post li,
 img {
-  max-width: 37.5em;
+  margin: 0 auto;
+  display: block;
+  /* max-width: 37.5em; */
+  width: 100%;
+  border-bottom-right-radius: 2em;
+  border-top-left-radius: 2em;
+  box-shadow: 0 0 3em 0 var(--alternative-light-opacity);
   /* 600px /16 */
 }
 
