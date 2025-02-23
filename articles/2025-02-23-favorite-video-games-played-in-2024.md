@@ -110,4 +110,4 @@ And I particularly loved a detail that people might miss if they don't know the 
 
 ![The Witness Screenshot](/img/games/the_witness.png)
 
-This is kind of cheating because I started playing The Witness over three years ago and left it unfinished. Thanks to some friends who recently started playing it, I got hooked again, and we got really competitive. This game needs no introduction, but I have to say that one of my most exciting moments of the year wasn’t just finishing the game: it was achieving the second achievement (the "challenge").
+This is kind of cheating because I started playing The Witness over three years ago and left it unfinished. Thanks to some friends who recently started playing it, I got hooked again, and we got really competitive. This game needs no introduction, but I have to say that one of my most exciting moments of the year wasn’t just finishing the game: it was getting the second achievement (the "challenge").
