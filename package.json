@@ -24,6 +24,7 @@
     "markdown-it-anchor": "^8.1.2"
   },
   "dependencies": {
+    "@11ty/eleventy-upgrade-help": "^3.0.1",
     "eleventy-plugin-wordcount": "^1.0.5",
     "node-fetch": "^2.6.7"
   }
