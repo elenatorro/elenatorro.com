@@ -8,6 +8,7 @@ const markdownItAnchor = require("markdown-it-anchor");
 const { wordCount } = require("eleventy-plugin-wordcount");
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(true);
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -88,6 +89,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("scripts");
   eleventyConfig.addPassthroughCopy("genuary2025/**/*.js")
   eleventyConfig.addPassthroughCopy("genuary2025/images")
+  eleventyConfig.addPassthroughCopy("art/**/*.js")
+  eleventyConfig.addPassthroughCopy("art/images")
   
 
   // Customize Markdown library and settings:
