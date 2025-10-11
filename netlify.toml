@@ -1,7 +1,3 @@
 [build]
   publish = "_site"
   command = "DEBUG=* eleventy"
-
-[[edge_functions]]
-  path = "/geo"
-  function = "geo"
