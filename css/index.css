@@ -309,62 +309,94 @@ blockquote p {
 }
 
 /* Orbiting satellites — adapt to light/dark via CSS vars */
-.home-header-profile-image-container.animated::before,
-.home-header-profile-image-container.animated::after {
+.orbiter {
+  display: none;
   position: absolute;
-  content: "";
-  display: block;
   top: 50%;
   left: 50%;
-  border-radius: 50%;
   pointer-events: none;
-  /* 3D sphere effect: light highlight + soft shadow + concentric ring texture */
+}
+
+.home-header-profile-image-container.animated .orbiter {
+  display: block;
+}
+
+/* Planet body: 3D sphere effect, occupies the full orbiter wrapper */
+.orbiter-body {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
   background-image:
     radial-gradient(circle at 30% 28%, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0) 55%),
     radial-gradient(circle at 70% 80%, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0) 60%),
     repeating-radial-gradient(circle at center, rgba(255, 255, 255, 0) 0 5px, rgba(0, 0, 0, 0.08) 5px 6px);
 }
 
-.home-header-profile-image-container.animated::before {
+.home-header-profile-image-container.animated .orbiter-near {
   width: clamp(2.4em, 3vw, 3em);
   height: clamp(2.4em, 3vw, 3em);
-  background-color: var(--primary-link-color);
   z-index: 3;
-  box-shadow: 0 0 30px var(--alternative-light-opacity);
-  animation: orbit-near 55s linear infinite;
+  --r: clamp(7em, 14vw, 10em);
+  animation: orbit-circular 25s linear infinite;
 }
 
-.home-header-profile-image-container.animated::after {
+.home-header-profile-image-container.animated .orbiter-near .orbiter-body {
+  background-color: var(--primary-link-color);
+  box-shadow: 0 0 30px var(--alternative-light-opacity);
+}
+
+.home-header-profile-image-container.animated .orbiter-far {
   width: clamp(3.2em, 4vw, 4em);
   height: clamp(3.2em, 4vw, 4em);
-  background-color: var(--primary-border-color);
   z-index: 1;
+  --r: clamp(10em, 18vw, 13em);
+  animation: orbit-circular 45s linear infinite;
+  animation-delay: -22s;
+}
+
+.home-header-profile-image-container.animated .orbiter-far .orbiter-body {
+  background-color: var(--primary-border-color);
   box-shadow: 0 0 40px var(--alternative-light-opacity);
-  animation: orbit-far 90s linear infinite;
-  animation-delay: -45s;
 }
 
-@keyframes orbit-near {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(clamp(5em, 10vw, 7em)) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(clamp(5em, 10vw, 7em)) rotate(-360deg);
-  }
+/*
+  Ring around .orbiter-far. Painted in DOM order:
+    1. .orbiter-ring-back — full elliptical outline
+    2. .orbiter-body     — planet covers the part of the back-arc that crosses through it
+    3. .orbiter-ring-front — same ring, clipped to its lower (front) half, on top of planet
+  No z-index hacks: sibling paint order does the work.
+*/
+.orbiter-ring-back,
+.orbiter-ring-front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 230%;
+  height: 32%;
+  border: 2px solid var(--primary-link-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(-18deg);
+  pointer-events: none;
+  box-shadow: 0 0 6px var(--alternative-light-opacity);
 }
 
-@keyframes orbit-far {
+.orbiter-ring-front {
+  /* Show only the lower half of the rotated ellipse — the part that should appear in front */
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+@keyframes orbit-circular {
   from {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(clamp(6em, 12vw, 9em)) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(var(--r)) rotate(0deg);
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(clamp(6em, 12vw, 9em)) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(var(--r)) rotate(-360deg);
   }
 }
 
 /* Hover: the whole system reacts as a single entity */
-.home-header-profile-image-container.animated::before,
-.home-header-profile-image-container.animated::after {
+.orbiter,
+.orbiter-body {
   transition: box-shadow .5s ease, filter .5s ease;
 }
 
@@ -372,13 +404,15 @@ blockquote p {
   transition: transform .5s ease, box-shadow .5s ease;
 }
 
-.home-header-profile-image-container.animated:hover::before {
+.home-header-profile-image-container.animated:hover .orbiter {
   filter: brightness(1.15) saturate(1.25);
+}
+
+.home-header-profile-image-container.animated:hover .orbiter-near .orbiter-body {
   box-shadow: 0 0 55px var(--primary-link-color);
 }
 
-.home-header-profile-image-container.animated:hover::after {
-  filter: brightness(1.15) saturate(1.25);
+.home-header-profile-image-container.animated:hover .orbiter-far .orbiter-body {
   box-shadow: 0 0 70px var(--primary-border-color);
 }
 
@@ -388,8 +422,7 @@ blockquote p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-header-profile-image-container.animated::before,
-  .home-header-profile-image-container.animated::after {
+  .orbiter {
     animation: none;
     transition: none;
   }
