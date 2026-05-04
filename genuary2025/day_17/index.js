@@ -11,7 +11,7 @@ function setup() {
     const HEIGHT = Math.round(HEIGHT_INCHES * DPI)
     const MARGIN = Math.round(MARGIN_INCHES * DPI)
 
-    createCanvas(WIDTH + MARGIN, HEIGHT + MARGIN)
+    createCanvas(WIDTH + MARGIN, HEIGHT + MARGIN, WEBGL)
 
     const N = 10
     const M = 10
